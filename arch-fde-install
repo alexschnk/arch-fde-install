@@ -95,6 +95,6 @@ arch-chroot /mnt /bin/bash -c "chmod -R 400 /keys"
 arch-chroot /mnt /bin/bash -c "mkinitcpio -P"
 arch-chroot /mnt /bin/bash -c "grub-mkconfig -o /boot/grub/grub.cfg"
 
-#umount -R /mnt
-#cryptsetup close root
-#reboot
+umount -R /mnt
+cryptsetup close root
+reboot
