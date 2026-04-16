@@ -2,10 +2,10 @@
 echo "Welcome to Arch linux installation script!"
 
 #Disk partitioning
-
-cfdisk
 lsblk
 read -p "Print disk name: " disk
+cfdisk $disk
+lsblk
 read -p "Print EFI partition name: " efipart
 read -p "Print root partition name: " rootpart
 
